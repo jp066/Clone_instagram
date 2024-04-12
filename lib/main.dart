@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:clone_instagram/screens/main_screen.dart';
+import 'package:clone_instagram/screens/SuggestedPostModel.dart';
+import 'package:clone_instagram/screens/explorar.dart';
+//fonts
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {

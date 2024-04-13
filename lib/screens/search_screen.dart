@@ -67,7 +67,7 @@ class _SearchScreenState extends State<SearchScreen> {
       height: 40,
       width: MediaQuery.of(context).size.width,
       margin: const EdgeInsets.only(left: 10, right: 10),
-      decoration: ,
+      decoration:  ,
     )
   }
   

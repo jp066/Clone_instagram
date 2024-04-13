@@ -1,4 +1,4 @@
-import 'package:clone_instagram/screens/search_screen.dart';
+//import 'package:clone_instagram/screens/search_screen.dart';
 import 'package:clone_instagram/screens/home_screen.dart';
 import 'package:clone_instagram/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -51,8 +51,8 @@ class _MainScreenState extends State<MainScreen> {
       case 0:
         return const HomeScreen();
 
-      case 1:
-        return const SearchScreen();
+/*      case 1:
+        return const SearchScreen();*/
 
       case 4:
         return const ProfileScreen();

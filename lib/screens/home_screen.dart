@@ -18,15 +18,13 @@ class _HomeScreenState extends State<HomeScreen> {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                for(int i = 0; i < 20; i++)
+                for (int i = 0; i < 20; i++)
                   Container(
                     width: 70,
                     margin: const EdgeInsets.only(right: 15),
-                    child: const Column(
-                      children: [
-                        StoryWiewWidget()
-                      ],
-                      ),
+                    child: Column(
+                      children: const [StoryWiewWidget()],
+                    ),
                   )
               ],
             ),

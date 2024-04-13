@@ -19,20 +19,28 @@ class _StoryWiewWidgetState extends State<StoryWiewWidget>
   void initState() {
     super.initState();
 
-    controller =
-        AnimationController(vsync: this, duration: const Duration(seconds: 4));
+    controller = AnimationController(vsync: this, duration: const Duration(seconds: 4));
     base = CurvedAnimation(parent: controller, curve: Curves.easeOut);
     reverse = Tween<double>(begin: 0.0, end: -1.0).animate(base);
-    gap = Tween<double>(begin: 0.0, end: 3.0).animate(base);
+    gap = Tween<double>(begin: 0.0, end: 3.0).animate(base)..addListener(() {
+      setState(() {
+      });
+    });
   }
+
   @override
   void dispose() {
     controller.dispose();
     super.dispose();
   }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return InkWell(
+      onTap: () {
+        controller.forward();
+      },
+      child: Container(
       margin: const EdgeInsets.only(top: 10),
       alignment: Alignment.center,
       child: RotationTransition(
@@ -41,12 +49,19 @@ class _StoryWiewWidgetState extends State<StoryWiewWidget>
           gapSize: gap.value,
           dashes: 40,
           color: Colors.white,
-          child: RotationTransition(turns: reverse, child: const Padding(padding: EdgeInsets.all(5.0), child: CircleAvatar(
-            radius: 30.0,
-            backgroundImage: NetworkImage("blob:https://web.whatsapp.com/0a506aee-1524-43f1-ae45-61abca441c63"),
-          ),),),
+          child: RotationTransition(
+            turns: reverse,
+            child: const Padding(
+              padding: EdgeInsets.all(5.0),
+              child: CircleAvatar(
+                radius: 30.0,
+                backgroundImage: NetworkImage(
+                    "https://th.bing.com/th/id/OIP.XYL5XjhGkPMq0UPMo6O0agHaFP?rs=1&pid=ImgDetMain"),
+              ),
+            ),
+          ),
         ),
       ),
-    );
+    ),);
   }
 }

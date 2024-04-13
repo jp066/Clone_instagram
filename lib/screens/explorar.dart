@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:projeto_01/SuggestedPostModel.dart";
+import "package:clone_instagram/screens/SuggestedPostModel.dart";
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);

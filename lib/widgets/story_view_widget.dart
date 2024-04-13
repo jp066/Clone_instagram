@@ -1,14 +1,14 @@
 import 'package:dashed_circle/dashed_circle.dart';
 import 'package:flutter/material.dart';
 
-class StoryWiewWidget extends StatefulWidget {
-  const StoryWiewWidget({Key? key}) : super(key: key);
+class StoryViewWidget extends StatefulWidget {
+  const StoryViewWidget({Key? key}) : super(key: key);
 
   @override
-  _StoryWiewWidgetState createState() => _StoryWiewWidgetState();
+  _StoryViewWidgetState createState() => _StoryViewWidgetState();
 }
 
-class _StoryWiewWidgetState extends State<StoryWiewWidget>
+class _StoryViewWidgetState extends State<StoryViewWidget>
     with TickerProviderStateMixin {
   late Animation gap;
   late Animation<double> base;
@@ -48,7 +48,7 @@ class _StoryWiewWidgetState extends State<StoryWiewWidget>
         child: DashedCircle(
           gapSize: gap.value,
           dashes: 40,
-          color: Colors.white,
+          color: const Color(0XFFED4634),
           child: RotationTransition(
             turns: reverse,
             child: const Padding(

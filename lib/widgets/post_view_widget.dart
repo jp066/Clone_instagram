@@ -40,9 +40,9 @@ class _PostViewWidgetState extends State<PostViewWidget> {
               ],
             ),
           ),
-          Image.asset("assets/images/perfil.jpeg",height: 300,fit: BoxFit.cover,),
+          Image.asset("assets/images/palmeiras.jpg",height: 300,fit: BoxFit.fill,),
 
-          const SizedBox(height: 10,),
+          const SizedBox(height: 20,),
 
           Padding(
             padding: const EdgeInsets.only(left: 10,right: 10),

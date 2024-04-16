@@ -4,6 +4,5 @@ class SuggestedPostModel {
   String contentLink2;
   String contentLink3;
 
-  SuggestedPostModel(this.containsVideo, this.contentLink1, this.contentLink2,
-      this.contentLink3);
+  SuggestedPostModel(this.containsVideo, this.contentLink1, this.contentLink2, this.contentLink3);
 }

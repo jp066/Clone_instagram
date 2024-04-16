@@ -29,18 +29,18 @@ class _PostViewWidgetState extends State<PostViewWidget> {
                     const CircleAvatar(
                       radius: 20,
                       backgroundImage: NetworkImage(
-                          "https://th.bing.com/th/id/OIP.XYL5XjhGkPMq0UPMo6O0agHaFP?rs=1&pid=ImgDetMain"
+                          "https://cdn.discordapp.com/attachments/1229579443857784925/1229601080300670986/grupo.jpeg?ex=6630463e&is=661dd13e&hm=fcdef14860bfa4e2311f982998706d978dc972e2eaa3095a1c46bb23fef109a8&"
                       ),
                     ),
                     const SizedBox(width: 10,),
-                    _textUtils.bold16("jp066", Colors.white)
+                    _textUtils.bold16("grupo02", Colors.white)
                   ],
                 ),
                 const Icon(Icons.more_vert_rounded,color: Colors.white,)
               ],
             ),
           ),
-          Image.asset("assets/images/palmeiras.jpg",height: 300,fit: BoxFit.fill,),
+          Image.asset("assets/images/grupo.jpeg",height: 300,fit: BoxFit.fill,),
 
           const SizedBox(height: 20,),
 
@@ -73,9 +73,9 @@ class _PostViewWidgetState extends State<PostViewWidget> {
                 const SizedBox(height: 5,),
                 Row(
                   children: [
-                    _textUtils.bold14("jp066", Colors.white),
+                    _textUtils.bold14("grupo02", Colors.white),
                     const SizedBox(width: 5,),
-                    _textUtils.normal14("Palmeiras carai kkk", Colors.white)
+                    _textUtils.normal14("noiss porra", Colors.white)
                   ],
                 ),
 

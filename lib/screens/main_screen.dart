@@ -1,7 +1,9 @@
-//import 'package:clone_instagram/screens/search_screen.dart';
-import 'package:clone_instagram/screens/home_screen.dart';
-import 'package:clone_instagram/screens/profile_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:clone_instagram/screens/home_screen.dart';
+import 'package:clone_instagram/screens/likes_screen.dart';
+import 'package:clone_instagram/screens/profile_screen.dart';
+import 'package:clone_instagram/screens/search_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -46,13 +48,19 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  Widget getScreen() {
+Widget getScreen() {
     switch (index) {
       case 0:
         return const HomeScreen();
 
-/*      case 1:
-        return const SearchScreen();*/
+      case 1:
+        return const SearchScreen();
+
+      case 2:
+        return const HomeScreen();
+
+      case 3:
+        return const LikesScreen();
 
       case 4:
         return const ProfileScreen();

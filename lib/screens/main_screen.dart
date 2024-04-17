@@ -38,7 +38,7 @@ class _MainScreenState extends State<MainScreen> {
         Padding(
           padding: const EdgeInsets.only(right: 10),
           child: Image.asset(
-            "assets/icons/messenger .png",
+            "assets/icons/messenger.png",
             color: Colors.white,
             width: 25,
             height: 25,
@@ -122,7 +122,7 @@ Widget getScreen() {
                 child: CircleAvatar(
                   radius: 15,
                   backgroundImage: NetworkImage(
-                      "https://media-for1-1.cdn.whatsapp.net/v/t61.24694-24/431575721_342636822161832_5467984804417706177_n.jpg?ccb=11-4&oh=01_ASB2OpD6bMtzZuqSsXg3UNP-V8VpdiCR-Ns0sc4_MOWREg&oe=6626EFC2&_nc_sid=e6ed6c&_nc_cat=106"),
+                      "https://cdn.discordapp.com/attachments/1229579443857784925/1229601080300670986/grupo.jpeg?ex=6630463e&is=661dd13e&hm=fcdef14860bfa4e2311f982998706d978dc972e2eaa3095a1c46bb23fef109a8&"),
                 )),
           )
         ],

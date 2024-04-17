@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_instagram/screens/home_screen.dart';
-import 'package:clone_instagram/screens/likes_screen.dart';
 import 'package:clone_instagram/screens/profile_screen.dart';
 import 'package:clone_instagram/screens/search_screen.dart';
 
@@ -60,9 +59,6 @@ Widget getScreen() {
         return const HomeScreen();
 
       case 3:
-        return const LikesScreen();
-
-      case 4:
         return const ProfileScreen();
 
       default:
@@ -113,7 +109,7 @@ Widget getScreen() {
           ),
           InkWell(
             onTap: () {
-              index = 4;
+              index = 3;
               setState(() {});
             },
             child: const CircleAvatar(

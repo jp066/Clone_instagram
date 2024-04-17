@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 10; i++)
                   Container(
                     width: 70,
                     margin: const EdgeInsets.only(right: 15),
@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
           const SizedBox(
             height: 20,
           ),
-          for (int i = 0; i < 10; i++) const PostViewWidget(),
+          for (int i = 0; i < 5; i++) const PostViewWidget(),
         ],
       ),
     );

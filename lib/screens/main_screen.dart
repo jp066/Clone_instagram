@@ -1,3 +1,4 @@
+import 'package:clone_instagram/screens/camera_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_instagram/screens/home_screen.dart';
@@ -60,6 +61,8 @@ Widget getScreen() {
 
       case 3:
         return const ProfileScreen();
+      case 4:
+        return const CameraApp();
 
       default:
         return Container();
@@ -94,14 +97,18 @@ Widget getScreen() {
                 height: 25,
                 color: Colors.white,
               )), //index 2
-
-          Image.asset(
-            "assets/icons/add_post.png",
-            width: 25,
-            height: 25,
-            color: Colors.white,
-          ),
-          Image.asset(
+          InkWell(
+              onTap: () {
+                index = 4;
+                setState(() {});
+              },
+              child: Image.asset(
+                "assets/icons/add_post.png",
+                width: 25,
+                height: 25,
+                color: Colors.white,
+              )),
+              Image.asset(
             "assets/icons/like.png",
             width: 25,
             height: 25,

@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:clone_instagram/screens/camera_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +63,7 @@ Widget getScreen() {
       case 3:
         return const ProfileScreen();
       case 4:
-        return const CameraApp();
+        return const CameraBottom();
 
       default:
         return Container();
@@ -98,7 +99,7 @@ Widget getScreen() {
                 color: Colors.white,
               )), //index 2
           InkWell(
-              onTap: () {
+              onTap: ()  {
                 index = 4;
                 setState(() {});
               },

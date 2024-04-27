@@ -1,5 +1,6 @@
 import 'package:clone_instagram/screens/camera_screen.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:clone_instagram/screens/likes_screen.dart';
+import 'package:clone_instagram/screens/messenger_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_instagram/screens/home_screen.dart';
 import 'package:clone_instagram/screens/profile_screen.dart';
@@ -36,19 +37,23 @@ class _MainScreenState extends State<MainScreen> {
       ),
       actions: [
         Padding(
-          padding: const EdgeInsets.only(right: 10),
-          child: Image.asset(
-            "assets/icons/messenger.png",
-            color: Colors.white,
-            width: 25,
-            height: 25,
-          ),
-        )
+            padding: const EdgeInsets.only(right: 10),
+            child: InkWell(
+                onTap: () {
+                  index = 5;
+                  setState(() {});
+                },
+                child: Image.asset(
+                  "assets/icons/messenger.png",
+                  width: 25,
+                  height: 25,
+                  color: Colors.white,
+                )))
       ],
     );
   }
 
-Widget getScreen() {
+  Widget getScreen() {
     switch (index) {
       case 0:
         return const HomeScreen();
@@ -61,8 +66,15 @@ Widget getScreen() {
 
       case 3:
         return const ProfileScreen();
+
       case 4:
         return const CameraBottom();
+
+      case 5:
+        return const MessengePage();
+
+      case 6:
+        return const NotificationsPage();
 
       default:
         return Container();
@@ -98,7 +110,7 @@ Widget getScreen() {
                 color: Colors.white,
               )), //index 2
           InkWell(
-              onTap: ()  {
+              onTap: () {
                 index = 4;
                 setState(() {});
               },
@@ -108,12 +120,18 @@ Widget getScreen() {
                 height: 25,
                 color: Colors.white,
               )),
-              Image.asset(
-            "assets/icons/like.png",
-            width: 25,
-            height: 25,
-            color: Colors.white,
-          ),
+          InkWell(
+              onTap: () {
+                index = 6;
+                setState(() {});
+              },
+              child: Image.asset(
+                "assets/icons/like.png",
+                width: 25,
+                height: 25,
+                color: Colors.white,
+              )),
+
           InkWell(
             onTap: () {
               index = 3;

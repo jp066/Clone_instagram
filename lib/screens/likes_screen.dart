@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:clone_instagram/utils/text_utils.dart';
 
-class LikesScreen extends StatefulWidget {
-  const LikesScreen({Key? key}) : super(key: key);
+class NotificationsPage extends StatefulWidget {
+  const NotificationsPage({Key? key}) : super(key: key);
 
   @override
-  _LikesScreenState createState() => _LikesScreenState();
+  _NotificationsPageState createState() => _NotificationsPageState();
 }
 
-class _LikesScreenState extends State<LikesScreen> {
+class _NotificationsPageState extends State<NotificationsPage> {
 
   final TextUtils _textUtils = TextUtils();
 

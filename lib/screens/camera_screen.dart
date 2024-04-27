@@ -1,7 +1,10 @@
 import 'dart:io';
 import 'package:camera_camera/camera_camera.dart';
+import 'package:clone_instagram/widgets/anexo.dart';
+import 'package:clone_instagram/widgets/previewPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 
 late List<CameraDescription> _cameras;
 
@@ -73,21 +76,45 @@ class CameraBottom extends StatefulWidget {
 }
 
 class _CameraBottomState extends State<CameraBottom> {
-  late File arquivo;
+  File? arquivo;
+  final picker = ImagePicker();
 
-  showPreview(file) async {
-    file = await Get.to(() => PreviewPage(file: file));
+  _CameraBottomState() : arquivo = null;
+
+//objetos
+
+  Future getFileFromGallery() async {
+    final file = await picker.pickImage(source: ImageSource.gallery);
 
     if (file != null) {
-      setState(()=> arquivo = file);
+      setState(() => arquivo = File(file.path));
     }
   }
+
+  showPreview(File? file) async {
+    if (file != null) {
+      file = await Get.to(() => PreviewPage(file: file!));
+
+      if (file != null) {
+        setState(() => arquivo = file);
+        Get.back();
+      }
+    }
+  }
+
+//metodos
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        title: const Text('Adicione seu post!'),
+        backgroundColor: Colors.black,
+        title: const Center(
+          child: Text('Adicione seu post',
+              style: TextStyle(
+                  fontFamily: 'FontSpring', fontSize: 26, color: Colors.white)),
+        ),
       ),
       body: Center(
         child: Row(
@@ -97,29 +124,45 @@ class _CameraBottomState extends State<CameraBottom> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                if (arquivo != null) Anexo(arquivo: arquivo!),
                 ElevatedButton.icon(
                   onPressed: () => Get.to(
                     () => CameraCamera(onFile: (file) => showPreview(file)),
                   ),
-                  icon: const Icon(Icons.camera_alt),
+                  icon: const Icon(Icons.camera_alt, color: Colors.white),
                   label: const Padding(
                     padding: EdgeInsets.all(16.0),
-                    child: Text('Tire uma foto'),
+                    child: Text('Tire uma foto',
+                        style: TextStyle(
+                            fontFamily: 'Helvetica_Neue',
+                            fontSize: 26,
+                            color: Colors.white),),
                   ),
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.transparent,
                       elevation: 0.0,
                       textStyle: const TextStyle(
                         fontSize: 18,
                       )),
                 ),
                 const Padding(
-                  padding: EdgeInsets.all(12.0),
-                  child: Text('ou'),
+                  padding: EdgeInsets.all(10.0),
+                  child: Text('ou', style: TextStyle(
+                    fontFamily: 'Helvetica_Neue',
+                    fontSize: 16,
+                    color: Colors.white60
+                  ),),
                 ),
                 OutlinedButton.icon(
-                  icon: const Icon(Icons.attach_file),
-                  label: const Text('Selecione um arquivo'),
-                  onPressed: (() => {}),
+                  icon: const Icon(Icons.attach_file, color: Colors.white,),
+                  label: const Text(
+                    'Selecione um arquivo',
+                    style: TextStyle(
+                        fontFamily: 'Helvetica_Neue',
+                        fontSize: 26,
+                        color: Colors.white),
+                  ),
+                  onPressed: (() => getFileFromGallery()),
                 )
               ],
             )

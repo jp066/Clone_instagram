@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:clone_instagram/screens/camera_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

@@ -73,11 +73,19 @@ class CameraBottom extends StatefulWidget {
 }
 
 class _CameraBottomState extends State<CameraBottom> {
- late File arquivo;
+  late File arquivo;
+
+  showPreview(file) async {
+    file = await Get.to(() => PreviewPage(file: file));
+
+    if (file != null) {
+      setState(()=> arquivo = file);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text('Adicione seu post!'),
       ),
@@ -90,28 +98,29 @@ class _CameraBottomState extends State<CameraBottom> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 ElevatedButton.icon(
-                  onPressed:() => Get.to(
-                    () => CameraCamera(onFile: (file) => print(file)),
+                  onPressed: () => Get.to(
+                    () => CameraCamera(onFile: (file) => showPreview(file)),
                   ),
                   icon: const Icon(Icons.camera_alt),
                   label: const Padding(
                     padding: EdgeInsets.all(16.0),
                     child: Text('Tire uma foto'),
-                    ),
-                    style: ElevatedButton.styleFrom(
+                  ),
+                  style: ElevatedButton.styleFrom(
                       elevation: 0.0,
                       textStyle: const TextStyle(
                         fontSize: 18,
                       )),
-                    ),
-                    const Padding(padding: EdgeInsets.all(12.0),
-                    child: Text('ou'),
-                    ),
-                    OutlinedButton.icon(
-                      icon: const Icon(Icons.attach_file),
-                      label: const Text('Selecione um arquivo'),
-                      onPressed: (() => {}),
-                    )
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Text('ou'),
+                ),
+                OutlinedButton.icon(
+                  icon: const Icon(Icons.attach_file),
+                  label: const Text('Selecione um arquivo'),
+                  onPressed: (() => {}),
+                )
               ],
             )
           ],

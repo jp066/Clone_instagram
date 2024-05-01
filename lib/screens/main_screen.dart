@@ -71,7 +71,7 @@ class _MainScreenState extends State<MainScreen> {
         return const CameraBottom();
 
       case 5:
-        return const MessengePage();
+        return MessengePage();
 
       case 6:
         return const NotificationsPage();
@@ -142,8 +142,8 @@ class _MainScreenState extends State<MainScreen> {
                 backgroundColor: Colors.white,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: NetworkImage(
-                      "https://cdn.discordapp.com/attachments/1229579443857784925/1229601080300670986/grupo.jpeg?ex=6630463e&is=661dd13e&hm=fcdef14860bfa4e2311f982998706d978dc972e2eaa3095a1c46bb23fef109a8&"),
+                  backgroundImage: AssetImage(
+                      "assets/images/grupo.jpeg"),
                 )),
           )
         ],

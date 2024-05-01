@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:camera_camera/camera_camera.dart';
-import 'package:clone_instagram/widgets/anexo.dart';
+import 'package:clone_instagram/widgets/anexo_widget.dart';
 import 'package:clone_instagram/widgets/previewPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

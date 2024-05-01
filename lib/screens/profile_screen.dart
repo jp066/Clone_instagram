@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:clone_instagram/utils/text_utils.dart';
+import 'package:flutter/widgets.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -42,7 +43,7 @@ class _ProfileScreenState extends State<ProfileScreen> with SingleTickerProvider
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const CircleAvatar(
-                              radius: 45, backgroundImage: NetworkImage("https://cdn.discordapp.com/attachments/1229579443857784925/1229601080300670986/grupo.jpeg?ex=6630463e&is=661dd13e&hm=fcdef14860bfa4e2311f982998706d978dc972e2eaa3095a1c46bb23fef109a8&")),
+                              radius: 45, backgroundImage: AssetImage("assets/images/grupo.jpeg")),
                           const SizedBox(height: 10),
                           _textUtils.normal16("Grupo 02", Colors.white)
                         ],

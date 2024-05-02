@@ -45,11 +45,11 @@ class Messages extends StatelessWidget {
         children: [
           Text(
             message,
-            style: TextStyle(fontSize: 16,color: isUser ? Colors.white: Colors.black),
+            style: TextStyle(fontSize: 20,color: isUser ? Colors.white: Colors.black),
           ),
           Text(
             date,
-            style: TextStyle(fontSize: 10,color: isUser ? Colors.white: Colors.black,),
+            style: TextStyle(fontSize: 20,color: isUser ? Colors.white: Colors.black,),
           )
         ],
       ),

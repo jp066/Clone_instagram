@@ -55,8 +55,8 @@ class _StoryViewWidgetState extends State<StoryViewWidget>
               padding: EdgeInsets.all(5.0),
               child: CircleAvatar(
                 radius: 30.0,
-                backgroundImage: NetworkImage(
-                    "https://cdn.discordapp.com/attachments/1229579443857784925/1229581154232045638/WhatsApp_Image_2024-04-15_at_20.39.27.jpeg?ex=663033af&is=661dbeaf&hm=4ba92e62eb79896afd4ba2069debb671ef7928690e1f74ca0838bf634c05b586&"),
+                backgroundImage: AssetImage(
+                    "assets/images/rabito.jpeg"),
               ),
             ),
           ),

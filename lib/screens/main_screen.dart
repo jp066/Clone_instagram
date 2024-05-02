@@ -1,4 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:clone_instagram/screens/camera_screen.dart';
+import 'package:clone_instagram/screens/likes_screen.dart';
+import 'package:clone_instagram/screens/list_chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_instagram/screens/home_screen.dart';
 import 'package:clone_instagram/screens/profile_screen.dart';
@@ -35,19 +37,23 @@ class _MainScreenState extends State<MainScreen> {
       ),
       actions: [
         Padding(
-          padding: const EdgeInsets.only(right: 10),
-          child: Image.asset(
-            "assets/icons/messenger.png",
-            color: Colors.white,
-            width: 25,
-            height: 25,
-          ),
-        )
+            padding: const EdgeInsets.only(right: 10),
+            child: InkWell(
+                onTap: () {
+                  index = 5;
+                  setState(() {});
+                },
+                child: Image.asset(
+                  "assets/icons/messenger.png",
+                  width: 25,
+                  height: 25,
+                  color: Colors.white,
+                )))
       ],
     );
   }
 
-Widget getScreen() {
+  Widget getScreen() {
     switch (index) {
       case 0:
         return const HomeScreen();
@@ -60,6 +66,15 @@ Widget getScreen() {
 
       case 3:
         return const ProfileScreen();
+
+      case 4:
+        return const CameraBottom();
+
+      case 5:
+        return const ListChatPage();
+
+      case 6:
+        return const NotificationsPage();
 
       default:
         return Container();
@@ -94,19 +109,29 @@ Widget getScreen() {
                 height: 25,
                 color: Colors.white,
               )), //index 2
+          InkWell(
+              onTap: () {
+                index = 4;
+                setState(() {});
+              },
+              child: Image.asset(
+                "assets/icons/add_post.png",
+                width: 25,
+                height: 25,
+                color: Colors.white,
+              )),
+          InkWell(
+              onTap: () {
+                index = 6;
+                setState(() {});
+              },
+              child: Image.asset(
+                "assets/icons/like.png",
+                width: 25,
+                height: 25,
+                color: Colors.white,
+              )),
 
-          Image.asset(
-            "assets/icons/add_post.png",
-            width: 25,
-            height: 25,
-            color: Colors.white,
-          ),
-          Image.asset(
-            "assets/icons/like.png",
-            width: 25,
-            height: 25,
-            color: Colors.white,
-          ),
           InkWell(
             onTap: () {
               index = 3;
@@ -117,8 +142,8 @@ Widget getScreen() {
                 backgroundColor: Colors.white,
                 child: CircleAvatar(
                   radius: 15,
-                  backgroundImage: NetworkImage(
-                      "https://cdn.discordapp.com/attachments/1229579443857784925/1229601080300670986/grupo.jpeg?ex=6630463e&is=661dd13e&hm=fcdef14860bfa4e2311f982998706d978dc972e2eaa3095a1c46bb23fef109a8&"),
+                  backgroundImage: AssetImage(
+                      "assets/images/grupo.jpeg"),
                 )),
           )
         ],

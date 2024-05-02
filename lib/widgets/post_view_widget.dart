@@ -29,7 +29,7 @@ class _PostViewWidgetState extends State<PostViewWidget> {
                     const CircleAvatar(
                       radius: 20,
                       backgroundImage: NetworkImage(
-                          "https://cdn.discordapp.com/attachments/1229579443857784925/1229601080300670986/grupo.jpeg?ex=6630463e&is=661dd13e&hm=fcdef14860bfa4e2311f982998706d978dc972e2eaa3095a1c46bb23fef109a8&"
+                          "assets/images/grupo.jpeg"
                       ),
                     ),
                     const SizedBox(width: 10,),
@@ -40,7 +40,7 @@ class _PostViewWidgetState extends State<PostViewWidget> {
               ],
             ),
           ),
-          Image.asset("assets/images/grupo.jpeg",height: 300,fit: BoxFit.fill,),
+          Image.asset("assets/images/grupo.jpeg",height: 300,fit: BoxFit.fitWidth,),
 
           const SizedBox(height: 20,),
 

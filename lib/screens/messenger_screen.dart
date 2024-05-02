@@ -81,7 +81,7 @@ class _MessengePageState extends State<MessengePage> {
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15),
                         ),
-                        label: Text('Enter Your Message')
+                        label: Text('Digite sua mensagem')
                       ),
                     ),
                   ),

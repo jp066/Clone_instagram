@@ -28,7 +28,11 @@ class _PostViewWidgetState extends State<PostViewWidget> {
                   children: [
                     const CircleAvatar(
                       radius: 20,
+<<<<<<< HEAD
                       backgroundImage: NetworkImage(
+=======
+                      backgroundImage: AssetImage(
+>>>>>>> 9caab60a59242dbd55e1ab83567c483a1abb4c1e
                           "assets/images/grupo.jpeg"
                       ),
                     ),
@@ -40,7 +44,11 @@ class _PostViewWidgetState extends State<PostViewWidget> {
               ],
             ),
           ),
+<<<<<<< HEAD
           Image.asset("assets/images/grupo.jpeg",height: 300,fit: BoxFit.fitWidth,),
+=======
+          Image.asset("assets/images/grupo.jpeg",height: 350,fit: BoxFit.fill,),
+>>>>>>> 9caab60a59242dbd55e1ab83567c483a1abb4c1e
 
           const SizedBox(height: 20,),
 

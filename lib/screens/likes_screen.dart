@@ -8,14 +8,10 @@ class NotificationsPage extends StatefulWidget {
   _NotificationsPageState createState() => _NotificationsPageState();
 }
 
-<<<<<<< HEAD
 class Like {
   final String userId;
   final String userName;
   final String assetImage;
-=======
-class _NotificationsPageState extends State<NotificationsPage> {
->>>>>>> 9caab60a59242dbd55e1ab83567c483a1abb4c1e
 
   Like({required this.userId, required this.userName, required this.assetImage});
 }

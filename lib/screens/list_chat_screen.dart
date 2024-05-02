@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:clone_instagram/screens/messenger_screen.dart';
-import 'package:clone_instagram/widgets/direct_list.dart'; // Certifique-se de importar a nova página
+import 'package:clone_instagram/screens/messenger_screen.dart'; // Certifique-se de que esta importação está correta
+import 'package:clone_instagram/widgets/direct_list.dart'; // Certifique-se de que esta importação está correta
 
 class ListChatPage extends StatefulWidget {
   const ListChatPage({Key? key}) : super(key: key);
@@ -40,7 +40,7 @@ class _ListChatPageState extends State<ListChatPage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
           backgroundColor: Colors.black,
-          title: const Center(
+          title: const Tab(
             child: Text("grupo02",
                 style: TextStyle(
                     color: Colors.white,
@@ -56,10 +56,8 @@ class _ListChatPageState extends State<ListChatPage> {
           return InkWell(
             onTap: () {
               if (chatUsers[index]["name"] == "ChatBot") {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const MessengePage()),
-                );
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MessengePage()));
               }
             },
             child: DirectList(

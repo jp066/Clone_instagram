@@ -1,7 +1,6 @@
 import 'package:clone_instagram/screens/camera_screen.dart';
 import 'package:clone_instagram/screens/likes_screen.dart';
 import 'package:clone_instagram/screens/list_chat_screen.dart';
-import 'package:clone_instagram/screens/messenger_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_instagram/screens/home_screen.dart';
 import 'package:clone_instagram/screens/profile_screen.dart';

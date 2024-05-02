@@ -30,7 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^1.2.1
-  google_generative_ai:  
+  google_generative_ai: ^0.3.2  
   intl:
 
 

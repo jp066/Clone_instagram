@@ -30,10 +30,11 @@ class _NotificationsPageState extends State<NotificationsPage> {
   void _fetchLikes() {
     // Simulação de obtenção de curtidas
     setState(() {
-      likes = [
-        Like(userId: '1', userName: 'Rabito', assetImage: 'assets/images/rabito.jpeg'),
-        // Adicione mais curtidas conforme necessário 
-      ];
+      likes = List<Like>.generate(10, (index) => Like(
+        userId: 'User $index',
+        userName: 'User $index',
+        assetImage: 'assets/images/rabito.jpeg',
+      ));
     });
   }
 

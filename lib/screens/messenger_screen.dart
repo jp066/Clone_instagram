@@ -36,6 +36,7 @@ class _MessengePageState extends State<MessengePage> {
       _messages.add(Message(isUser: false, message: response.text?? "", date: DateTime.now()));
     });
 
+    _userInput.clear();
   }
   
   @override
@@ -83,6 +84,9 @@ class _MessengePageState extends State<MessengePage> {
                         ),
                         label: Text('Digite sua mensagem')
                       ),
+                      onFieldSubmitted: (text) {
+                        sendMessage();
+                      },
                     ),
                   ),
                   Spacer(),

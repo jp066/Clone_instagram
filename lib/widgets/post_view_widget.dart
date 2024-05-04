@@ -40,7 +40,7 @@ class _PostViewWidgetState extends State<PostViewWidget> {
               ],
             ),
           ),
-          Image.asset("assets/images/grupo.jpeg",height: 300,fit: BoxFit.fitWidth,),
+          Image.asset("assets/images/grupo.jpeg",height: 300,fit: BoxFit.fill,),
 
           const SizedBox(height: 20,),
 
